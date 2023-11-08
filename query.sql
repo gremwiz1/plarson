@@ -1,0 +1,23 @@
+SELECT 'January' AS Month, 31 AS Days
+UNION ALL
+SELECT 'February' AS Month, CASE WHEN YEAR(CURRENT_DATE) % 4 = 0 AND (YEAR(CURRENT_DATE) % 100 != 0 OR YEAR(CURRENT_DATE) % 400 = 0) THEN 29 ELSE 28 END AS Days
+UNION ALL
+SELECT 'March' AS Month, 31 AS Days
+UNION ALL
+SELECT 'April' AS Month, 30 AS Days
+UNION ALL
+SELECT 'May' AS Month, 31 AS Days
+UNION ALL
+SELECT 'June' AS Month, 30 AS Days
+UNION ALL
+SELECT 'July' AS Month, 31 AS Days
+UNION ALL
+SELECT 'August' AS Month, 31 AS Days
+UNION ALL
+SELECT 'September' AS Month, 30 AS Days
+UNION ALL
+SELECT 'October' AS Month, 31 AS Days
+UNION ALL
+SELECT 'November' AS Month, 30 AS Days
+UNION ALL
+SELECT 'December' AS Month, 31 AS Days;
